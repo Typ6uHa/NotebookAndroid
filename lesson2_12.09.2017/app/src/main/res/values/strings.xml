@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">lesson2_12.09.2017</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="do_you_want_open_new_activity">Do you want open new activity?</string>
+
+    <string name="dialog_positive">Окей</string>
+    <string name="dialog_negative">Нет</string>
+</resources>
