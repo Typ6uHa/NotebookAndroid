@@ -1,8 +1,5 @@
 package ru.startandroid.lesson3.model;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +7,7 @@ import java.util.List;
  * Created by Aizat on 18.09.2017.
  */
 
-public class Contact implements Parcelable {
+public class Contact {
 
     private int id;
 
@@ -26,26 +23,6 @@ public class Contact implements Parcelable {
         this.name = name;
         this.phoneNumbers = phoneNumbers;
     }
-
-
-    protected Contact(Parcel in) {
-        id = in.readInt();
-        photoId = in.readInt();
-        name = in.readString();
-        phoneNumbers = in.createTypedArrayList(PhoneNumber.CREATOR);
-    }
-
-    public static final Creator<Contact> CREATOR = new Creator<Contact>() {
-        @Override
-        public Contact createFromParcel(Parcel in) {
-            return new Contact(in);
-        }
-
-        @Override
-        public Contact[] newArray(int size) {
-            return new Contact[size];
-        }
-    };
 
     public int getId() {
         return id;
@@ -73,18 +50,5 @@ public class Contact implements Parcelable {
 
     public void setPhoneNumbers(ArrayList<PhoneNumber> phoneNumbers) {
         this.phoneNumbers = phoneNumbers;
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeInt(id);
-        parcel.writeInt(photoId);
-        parcel.writeString(name);
-        parcel.writeTypedList(phoneNumbers);
     }
 }

@@ -1,4 +1,4 @@
-package ru.startandroid.lesson3.screen.contact_list;
+package ru.startandroid.lesson3;
 
 /**
  * Created by Aizat on 18.09.2017.
