@@ -43,4 +43,6 @@ public class ContactPagerActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
 
     }
+
+    //
 }
