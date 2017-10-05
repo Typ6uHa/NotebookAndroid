@@ -1,11 +1,9 @@
-package ru.startandroid.lesson3.screen.contact_list;
+package ru.startandroid.lesson3;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import ru.startandroid.lesson3.R;
 
 /**
  * Created by Aizat on 18.09.2017.

@@ -1,5 +1,6 @@
-package ru.startandroid.lesson3.screen.contact_list;
+package ru.startandroid.lesson3;
 
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,14 +10,12 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import ru.startandroid.lesson3.R;
 import ru.startandroid.lesson3.model.Contact;
 import ru.startandroid.lesson3.model.PhoneNumber;
-import ru.startandroid.lesson3.screen.contact_pager.ContactPagerActivity;
 
 public class ContactsListActivity extends AppCompatActivity implements OnItemClickListener{
 
-    private ArrayList <Contact> contacts;
+    private List <Contact> contacts;
 
     RecyclerView recyclerView;
 
@@ -41,9 +40,9 @@ public class ContactsListActivity extends AppCompatActivity implements OnItemCli
         recyclerView.setAdapter(adapter);
     }
 
-    private ArrayList<Contact> getContacts () {
+    private List<Contact> getContacts () {
 
-        ArrayList <Contact> contacts = new ArrayList<>();
+        List <Contact> contacts = new ArrayList<>();
 
         contacts.add(new Contact(0,R.mipmap.ic_launcher_round,"Дмитрий", new ArrayList<PhoneNumber>(){{
             add(new PhoneNumber("Домашний","+ 7 999 111 22 33"));
@@ -66,6 +65,6 @@ public class ContactsListActivity extends AppCompatActivity implements OnItemCli
 
     @Override
     public void onClick(int position) {
-        startActivity(ContactPagerActivity.makeIntent(this, position, contacts));
+        Toast.makeText(this,"position is "+ position, Toast.LENGTH_LONG).show();
     }
 }
